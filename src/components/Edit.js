@@ -56,20 +56,20 @@ function Edit(props) {
         <Form onSubmit={updateUser}>
           <Form.Group>
             <Form.Label>First Name</Form.Label>
-            <Form.Control type="text" name="firstname" id="firstname" placeholder="Enter first name" value={user.firstname} onChange={onChange} />
+            <Form.Control required type="text" name="firstname" id="firstname" placeholder="Enter first name" value={user.firstname} onChange={onChange} />
           </Form.Group>
           <Form.Group>
             <Form.Label>Last Name</Form.Label>
-            <Form.Control type="text" name="lastname" id="lastname" placeholder="Enter last name" value={user.lastname} onChange={onChange} />
+            <Form.Control required type="text" name="lastname" id="lastname" placeholder="Enter last name" value={user.lastname} onChange={onChange} />
           </Form.Group>
           <Form.Group>
             <Form.Label>Gender</Form.Label>
-            <Form.Check type="radio" label="Male" name="gender" id="gendermale" onChange={onChange} value="Male" checked={user.gender === 'Male'} />
-            <Form.Check type="radio" label="Female" name="gender" id="genderfemale" onChange={onChange} value="Female" checked={user.gender === 'Female'} />
+            <Form.Check required type="radio" label="Male" name="gender" id="gendermale" onChange={onChange} value="Male" checked={user.gender === 'Male'} />
+            <Form.Check required type="radio" label="Female" name="gender" id="genderfemale" onChange={onChange} value="Female" checked={user.gender === 'Female'} />
           </Form.Group>
           <Form.Group>
             <Form.Label>DOB</Form.Label>
-            <Form.Control type="date" name="dob" id="dob" placeholder="Enter date of birth" value={`${new Date(user.dob).getFullYear()}-${new Date(user.dob).getMonth() + 1 > 9 ? new Date(user.dob).getMonth() + 1 : `0${new Date(user.dob).getMonth() + 1}`}-${new Date(user.dob).getDate() > 9 ? new Date(user.dob).getDate() : `0${new Date(user.dob).getDate()}`}`} onChange={onDateChange} />
+            <Form.Control required type="date" name="dob" id="dob" placeholder="Enter date of birth" value={`${new Date(user.dob).getFullYear()}-${new Date(user.dob).getMonth() + 1 > 9 ? new Date(user.dob).getMonth() + 1 : `0${new Date(user.dob).getMonth() + 1}`}-${new Date(user.dob).getDate() > 9 ? new Date(user.dob).getDate() : `0${new Date(user.dob).getDate()}`}`} onChange={onDateChange} />
           </Form.Group>
           <Button variant="primary" type="submit">
             Update
