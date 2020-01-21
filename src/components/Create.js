@@ -11,7 +11,7 @@ function Create(props) {
   const [showLoading, setShowLoading] = useState(false);
   const apiUrl = "http://localhost:5000/users/addUser";
 
-  const saveProduct = (e) => {
+  const saveUser = (e) => {
     setShowLoading(true);
     e.preventDefault();
     const data = { firstname: user.firstname, lastname: user.lastname, gender: user.gender, dob: user.dob };
@@ -41,7 +41,7 @@ function Create(props) {
         </Spinner> 
       } 
       <Jumbotron>
-        <Form onSubmit={saveProduct}>
+        <Form onSubmit={saveUser}>
           <Form.Group>
             <Form.Label>First Name</Form.Label>
             <Form.Control type="text" name="firstname" id="firstname" placeholder="Enter first name" value={user.firstname} onChange={onChange} />
