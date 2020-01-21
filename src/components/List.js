@@ -61,7 +61,7 @@ function List(props) {
               onClick={() => {
                 showDetail(item._id);
               }}>
-              {item.firstname}
+              {`${item.firstname} ${item.lastname}`}
               <Fontawesome name='arrow-right' style={{padding:8}}></Fontawesome>
             </ListGroup.Item>
           ))}
