@@ -29,7 +29,6 @@ function Create(props) {
 
   const onDateChange = (e) => {
     e.persist();
-    console.log('e',e, e.target.value, e.target.name)
     setUser({...user, [e.target.name]: new Date(e.target.value)});
   }
 

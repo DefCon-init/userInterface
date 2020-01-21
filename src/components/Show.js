@@ -30,7 +30,6 @@ function Show(props) {
   };
 
   const deleteUser = (id) => {
-    console.log('id', id)
     setShowLoading(true);
     const data = { id }
     axios.delete(deleteUrl, {
